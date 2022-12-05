@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('UI Test')
+        {
+            steps {
+                build 'FirstJenkinsJob'
+            }
+        }
+        
+        stage('API Test')
+        {
+            steps
+            {
+                build 'madhusnew'
+            }
+        }
+        
+        stage('perfor Test')
+        {
+            steps
+            {
+                build 'newbuild1'
+            }
+        }
+    }
+}
